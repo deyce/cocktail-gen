@@ -4,14 +4,14 @@ import axios from "axios";
 import bodyParser from "body-parser";
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 //api used to generate random cocktail recipe
 const API_URL = "https://www.thecocktaildb.com/api/json/v1/1/random.php";
 
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.get("/", (req, res) => {
+app.get("/cocktail-gen", (req, res) => {
     res.render("index.ejs", { drink: "" });
   });
 
