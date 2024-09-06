@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Cocktail Generator</title>
+    <link rel="stylesheet" href="./styles/main.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class = "whole-container">
+            
+            <div class = "cocktail-img">
+                <img id = "first-img" src = "./images/cocktail1.jpg">
+            </div>
+
+            <div class="cocktail-container">
+                <div class="title"> 
+                    <h1 class="header-title">Generate random cocktail instructions</h1>
+                </div>
+                <div class="generate-button">
+                    <button class = "button-30" type="submit" id="generate" onclick="window.location.href='/generated'">Generate</button>
+                </div>
+                <div class="main-content">
+                    <!-- Ensure drink and instructions are being passed correctly -->
+                    <% if (drink) { %>
+                        <h3>Drink: <%= drink %></h3>
+                        <p>Instructions: <%= instructions %></p>
+                    <% } else { %>
+                        <h3> Have fun!</h3>
+                    <% } %>
+                </div>
+            </div>
+
+            <div class = "cocktail-img1">
+                <img id = "second-img" src = "./images/cocktail2.jpg">
+            </div>
+
+        </div>
+        
+        
+    </div>
+</body>
+<footer>
+    <h2 id = "chandon-footer"> Developed by Chandon Dey</h2>
+</footer>
+</html>
